@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Aerolinea LASER</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="ie-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" type="text/css" href="./css/.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div th:if="${usaurios !=null and !usuarios.empty}">
+            <table border="1">
+                <tr>
+                    <th>Nombre Usuario</th>
+                    <th>Contraseña</th>                                  
+                </tr>
+
+                <tr th:each=" u: ${usuarios}">
+                    <td th:text="${u.nombreUsuario}">Mostrar </td>
+                    <td th:text="${u.contrasena}">Mostrar </td>
+                    
+                </tr> 
+            </table>
+        </div>
+        <div th:if="${usuarios == null or usuarios.empty}">
+            No hay personas registradas
+        </div>
+
+       
+
+    </body>
+</html>
+
