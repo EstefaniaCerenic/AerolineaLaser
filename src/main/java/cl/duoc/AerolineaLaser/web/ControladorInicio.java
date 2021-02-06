@@ -24,6 +24,15 @@ public class ControladorInicio {
        return "index";
        
     }
+    
+    @GetMapping("/login")
+    public String login(Model modelo){
+       var usuarios = usuarioService.listarUsuarios();      
+  
+       modelo.addAttribute("usuarios",usuarios);
+       return "login";
+       
+    }
 }
     
 
