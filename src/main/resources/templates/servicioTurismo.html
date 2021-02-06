@@ -1,16 +1,173 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device, initial-scale=1">
+	<meta name="author" content="Ecerenic">
+	<meta http-equiv="X-UA-COMPATIBLE" content="ie-edge">
+
+	   <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="./css/premium.css" th:href="@{/css/premium.css}">
+ <link rel="stylesheet" type="text/css" href="./js/premium.js" th:href="@{/js/premium.js}">
+	<title></title>
+</head>
+<body>
+	<header id="titulo">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<a href="#" class="navbar-brand">Servicio Turismo</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDesplegable">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navDesplegable">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#" >Logout</a>
+
+					</li>
+					
+				</ul>
+
+			</div>
+
+		</nav>
+
+	</header>
+
+<div class="card-deck" >
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?vip-flight" alt="vip-flight" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Descuentos
+          
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        Ingresa al club de socios y descubre tus descuentos.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?planner" alt="planner" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          
+          xxxx
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        Cliente turista
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?sale" alt="sale" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Descuentos
+          
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        Revisa nuestro listado de convenios alrededor del mundo.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?hotel" alt="hotel" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Hoteles
+          
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        Beneficios y Convenios en todo el mundo.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+  
+</div>
+
+
+
+
+		
+			
+		
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+</body>
 </html>
