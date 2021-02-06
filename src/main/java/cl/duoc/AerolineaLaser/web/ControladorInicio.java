@@ -18,9 +18,6 @@ public class ControladorInicio {
     
     @GetMapping("/")
     public String index(Model modelo){
-       
-        
-        
        var usuarios = usuarioService.listarUsuarios();      
   
        modelo.addAttribute("usuarios",usuarios);

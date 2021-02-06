@@ -13,15 +13,15 @@
     </head>
     <body>
 
-        <div th:if="${usaurios !=null and !usuarios.empty}">
+        <div th:if="${usuarios != null and !usuarios.empty}">
             <table border="1">
                 <tr>
                     <th>Nombre Usuario</th>
                     <th>Contraseña</th>                                  
                 </tr>
 
-                <tr th:each=" u: ${usuarios}">
-                    <td th:text="${u.nombreUsuario}">Mostrar </td>
+                <tr th:each="u: ${usuarios}">
+                    <td th:text="${u.nombre}">Mostrar </td>
                     <td th:text="${u.contrasena}">Mostrar </td>                    
                 </tr> 
             </table>

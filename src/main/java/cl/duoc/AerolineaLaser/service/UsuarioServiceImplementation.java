@@ -1,4 +1,3 @@
-
 package cl.duoc.AerolineaLaser.service;
 
 import cl.duoc.AerolineaLaser.dao.UsuarioDAO;
@@ -13,31 +12,31 @@ public class UsuarioServiceImplementation implements UsuarioService {
 
     @Autowired
     private UsuarioDAO usuarioDAO;
-    
+
     @Override
     @Transactional(readOnly = true)
     public List<Usuario> listarUsuarios() {
-        return (List<Usuario>)usuarioDAO.findAll();
-           }
+        return (List<Usuario>) usuarioDAO.findAll();
+    }
 
     @Override
     @Transactional
     public void guardar(Usuario usuario) {
         usuarioDAO.save(usuario);
-        
+
     }
 
     @Override
     @Transactional
     public void eliminar(Usuario usuario) {
         usuarioDAO.delete(usuario);
- 
+
     }
 
     @Override
-    @Transactional(readOnly=true)
+    @Transactional(readOnly = true)
     public Usuario encontrarUsuario(Usuario usuario) {
-       return usuarioDAO.findById(usuario.getId()).orElse(usuario);
+        return usuarioDAO.findById(usuario.getId()).orElse(usuario);
     }
-    
+
 }
