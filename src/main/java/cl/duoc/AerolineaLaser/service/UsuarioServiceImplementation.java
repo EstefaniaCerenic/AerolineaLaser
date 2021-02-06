@@ -37,7 +37,7 @@ public class UsuarioServiceImplementation implements UsuarioService {
     @Override
     @Transactional(readOnly=true)
     public Usuario encontrarUsuario(Usuario usuario) {
-       return usuarioDAO.findById(usuario.getIdUsuario()).orElse(usuario);
+       return usuarioDAO.findById(usuario.getId()).orElse(usuario);
     }
     
 }

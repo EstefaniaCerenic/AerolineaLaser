@@ -5,7 +5,7 @@ CREATE TABLE Tipo_Usuario(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) NOT NULL
 );
-CREATE TABLE Usuarios(
+CREATE TABLE Usuario(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) NOT NULL,
     apellido VARCHAR(20) NOT NULL,
@@ -21,12 +21,12 @@ INSERT INTO Tipo_Usuario(nombre)
 VALUES ("turismo");
 INSERT INTO Tipo_Usuario(nombre)
 VALUES ("premium");
-INSERT INTO Usuarios(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
+INSERT INTO Usuario(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
 VALUES ("Administrador", "Uno", "admin@laser.com", "admin", "123", 1);
-INSERT INTO Usuarios(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
+INSERT INTO Usuario(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
 VALUES ("Usuario", "Turista", "turista@gmail.com", "usertur", "123", 2);
-INSERT INTO Usuarios(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
+INSERT INTO Usuario(nombre, apellido, correo, usuario, contrasena, tipo_usuario_id)
 VALUES ("Usuario", "Premium", "premium@gmail.com", "userpre", "123", 3);
 
 SELECT *
-FROM Usuarios;
+FROM Usuario;
