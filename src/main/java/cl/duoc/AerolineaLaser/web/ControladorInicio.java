@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 @Slf4j
 public class ControladorInicio {
-    @Autowired
     
+    @Autowired    
     private UsuarioService usuarioService;
-   
-    
+       
     @GetMapping("/")
     public String index(Model modelo){
        var usuarios = usuarioService.listarUsuarios();      
