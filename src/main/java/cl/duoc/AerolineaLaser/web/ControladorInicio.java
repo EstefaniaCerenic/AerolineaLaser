@@ -49,6 +49,15 @@ public class ControladorInicio {
        return "servicioTurismo";
        
     }
+    
+    @GetMapping("/logout")
+    public String logout(Model modelo){
+       var usuarios = usuarioService.listarUsuarios();      
+  
+       modelo.addAttribute("usuarios",usuarios);
+       return "logout";
+       
+    }
 }
     
 

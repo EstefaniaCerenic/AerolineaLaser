@@ -33,7 +33,13 @@ header{
 	justify-content: center;
 }
 
+.navbar-nav{
+    align-items: center;
+}
 
+.btn {
+    margin-top: 10px;
+}
 
 
 

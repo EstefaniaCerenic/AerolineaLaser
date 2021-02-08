@@ -35,9 +35,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .hasAnyRole("USER","ADMIN")
                 .and()
                 .formLogin()
-                        .loginPage("/login")
+                        .loginPage("/login")                
+                .and()                
+                .exceptionHandling().accessDeniedPage("/errores/403")
                 .and()
-                .exceptionHandling().accessDeniedPage("/errores/403");
+              .logout()                              
+                  .logoutSuccessUrl("/logout");
     }
     
 }
