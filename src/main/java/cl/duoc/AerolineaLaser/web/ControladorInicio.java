@@ -32,6 +32,23 @@ public class ControladorInicio {
        return "login";
        
     }
+    
+     @GetMapping("/servicioPremium")
+    public String servicioPremium(Model modelo){
+       var usuarios = usuarioService.listarUsuarios();      
+  
+       modelo.addAttribute("usuarios",usuarios);
+       return "servicioPremium";
+       
+    }
+    @GetMapping("/servicioTurismo")
+    public String servicioTurismo(Model modelo){
+       var usuarios = usuarioService.listarUsuarios();      
+  
+       modelo.addAttribute("usuarios",usuarios);
+       return "servicioTurismo";
+       
+    }
 }
     
 
