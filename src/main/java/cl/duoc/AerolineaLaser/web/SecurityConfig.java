@@ -15,15 +15,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         auth.inMemoryAuthentication()
                 .withUser("admin")
                 .password("{noop}123")
-                .roles("ADMIN","USER")
+                .roles("ADMIN","USERTURISMO","USERPREMIUM")
                 .and()
                 .withUser("usertur")
                 .password("{noop}123")
-                .roles("USER")
+                .roles("USERTURISMO")
                 .and()
                 .withUser("userpre")
                 .password("{noop}123")
-                .roles("USER");
+                .roles("USERPREMIUM");
     }
     
     @Override
@@ -32,12 +32,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .antMatchers("/servicioPremium","/servicioTurismo")
                 .hasRole("ADMIN")
                 .antMatchers("/")
-                .hasAnyRole("USER","ADMIN")
+                .hasAnyRole("USERTURISMO","USERPREMIUM","ADMIN")                
+                .antMatchers("/servicioPremium")
+                .hasRole("USERPREMIUM")
+                .antMatchers("/servicioTurismo")
+                .hasRole("USERTURISMO")
                 .and()
                 .formLogin()
                         .loginPage("/login")                
                 .and()                
-                .exceptionHandling().accessDeniedPage("/errores/403")
+                .exceptionHandling().accessDeniedPage("/login")
                 .and()
               .logout()                              
                   .logoutSuccessUrl("/logout");

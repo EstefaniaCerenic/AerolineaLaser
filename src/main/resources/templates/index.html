@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-    
+
     <head>
         <title>Aerolinea LASER</title>
         <meta charset="UTF-8">
@@ -16,12 +16,16 @@
     </head>
     <body>
         <div class="modal-dialog text-center">
-            <div class="col-sm-8 main-section">
+            <div class="col-sm-10 main-section">
                 <div class="modal-content" style="background-color: #3b4652; opacity: .85;">
                     <div class="modal-title">
-                    <h1 class="" style="padding-top: 20px; color: whitesmoke">Bienvenido a Aerolíneas Laser</h1> 
+                        <h1 class="" style="padding-top: 20px; color: whitesmoke">Bienvenido a Aerolíneas Laser</h1> 
                     </div>
                     <br>
+                    <nav sec:authorize="hasRole('ROLE_ADMIN')" class="nav">                       
+                        <a class="nav-link btn btn-outline-info" th:href="@{/servicioTurismo}">Servicio Turismo</a>
+                        <a class="nav-link btn btn-outline-info" th:href="@{/servicioPremium}">Servicio Premium</a>                        
+                    </nav>
                     <a th:href="@{/login}" class="btn btn-primary" style="font-size: 18;"><i class="fas fa-plane"></i> Ingresar </a>
                 </div>
             </div>
