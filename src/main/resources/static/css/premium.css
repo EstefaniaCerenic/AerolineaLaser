@@ -3,6 +3,16 @@ body{
     background-size: cover;
 }
 
+h6{
+    font-family: garamond;
+    font-size:20;
+}
+
+h2{
+    font-family: garamond;
+    font-size:40;
+}
+
 
 header{
 	height:5em;

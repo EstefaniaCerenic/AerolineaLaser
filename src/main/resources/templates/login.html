@@ -17,7 +17,7 @@
         <!-- Nuestro css-->
         <link rel="stylesheet" type="text/css" href="./css/login.css" th:href="@{./css/login.css}">
     </head>
-    
+
     <body>
         <div class="modal-dialog text-center">
 
@@ -39,10 +39,7 @@
                     </form>
 
                     <div th:if="${param.error}" class="alert alert-danger" role="alert">
-                        Invalid username and password.
-                    </div>
-                    <div th:if="${param.logout}" class="alert alert-success" role="alert">
-                        You have been logged out.
+                        Nombre de usuario o contraseña inválidos.
                     </div>
                 </div>
             </div>

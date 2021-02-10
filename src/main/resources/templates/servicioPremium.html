@@ -22,7 +22,7 @@
         <title></title>
     </head>
     <body>
-        <header id="titulo">
+        <header id="titulo" >
             <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                 <a href="#" class="navbar-brand">Servicio Premium</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDesplegable">
@@ -36,9 +36,10 @@
                     </ul>
                 </div>
                 <form method="post" th:action="@{/logout}">	
-                    <li class="nav-item-right mr-5">
+                    <div class="nav-item-right mr-1" >
+                        <b class="mr-1" style="color:#ffffff">Bienvenido a Aerolinea LASER: </b><span class="mr-2" style="color:#ffffff" sec:authentication="name"></span>
                         <a  th:href="@{/logout}"><input type="submit" class="btn btn-outline-info" value="Cerrar sesión"/></a>
-                    </li>
+                    </div>
                 </form>	
             </nav>
         </header>
@@ -50,7 +51,7 @@
                         <img class="card__image img-fluid" style="width:434px;height:250px" src="/img/asiento.jpeg" alt="vip-flight" />
                     </div>
                     <br/>
-                    <div class="card-title">
+                    <div class="card-title mt-3">
 
                         <h2 class="text-center">
                             Ingreso Preferencial
@@ -69,7 +70,7 @@
                         <img class="card__image img-fluid" style="width:434px;height:250px" src="/img/calendario.jpg" alt="planner" />
                     </div>
                     <br/>
-                    <div class="card-title">
+                    <div class="card-title mt-3">
                         <h2 class="text-center">
                             Flexibilidad
                         </h2>
@@ -87,7 +88,7 @@
                         <img class="card__image img-fluid" style="width:434px;height:250px"src="/img/descuentos.jpg" alt="sale" />
                     </div>
                     <br/>
-                    <div class="card-title">
+                    <div class="card-title mt-3">
 
                         <h2 class="text-center">
                             Descuentos
@@ -106,7 +107,7 @@
                         <img class="card__image img-fluid" style="width:434px;height:250px" src="/img/hotel.jpg" alt="hotel" />
                     </div>
                     <br/>
-                    <div class="card-title">
+                    <div class="card-title mt-3">
 
                         <h2 class="text-center">
                             Hoteles

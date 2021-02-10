@@ -2,6 +2,15 @@ body{
     background: url(../img/aviones.jpeg) no-repeat center center fixed;
     background-size: cover;
 }
+h6{
+    font-family: garamond;
+    font-size:20;
+}
+
+h2{
+    font-family: garamond;
+    font-size:40;
+}
 
 
 header{
