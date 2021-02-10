@@ -5,32 +5,36 @@ body{
 
 
 header{
-	height:5em;
-	width: 100%;
+    height:5em;
+    width: 100%;
 }
 
 .deck{
-	align-content: center;
-	align-items: center;
+    align-content: center;
+    align-items: center;
 }
 
+.flap{
+    align-content: center;
+    align-items: center;  
+}
 
 .bg-vino{
-	background-color:#73102c;
+    background-color:#73102c;
 
 }
 
 
 .icono{
-	width: 8%;
-	float:right;
+    width: 8%;
+    float:right;
 }
 
 .centrado{
-	text-align: center; /*texto alineado*/
-	margin-left: 50%;/*margen a la izquierda*/
-	display: flex;  /*horizontal*/
-	justify-content: center;
+    text-align: center; /*texto alineado*/
+    margin-left: 50%;/*margen a la izquierda*/
+    display: flex;  /*horizontal*/
+    justify-content: center;
 }
 
 .navbar-nav{

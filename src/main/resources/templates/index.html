@@ -24,7 +24,8 @@
                     <br>
                     <nav sec:authorize="hasRole('ROLE_ADMIN')" class="nav">                       
                         <a class="nav-link btn btn-outline-info" th:href="@{/servicioTurismo}">Servicio Turismo</a>
-                        <a class="nav-link btn btn-outline-info" th:href="@{/servicioPremium}">Servicio Premium</a>                        
+                        
+                        <a class="nav-link btn btn-outline-info" style="margin-left: 20px" th:href="@{/servicioPremium}">Servicio Premium</a>                        
                     </nav>
                     <a th:href="@{/login}" class="btn btn-primary" hidden="true" style="font-size: 18;"><i class="fas fa-plane"></i> Ingresar </a>
                 </div>
